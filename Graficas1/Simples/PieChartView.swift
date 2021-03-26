@@ -85,8 +85,7 @@ class PieChartView: UIView {
               segmentCenter = segmentCenter.projected(by: radius * textPositionOffset, angle: halfAngle)
             }
             let string = segment.name.isEmpty ? segment.value.description : segment.name
-            string.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),
-                             NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
+            string.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
         }
         
     }
