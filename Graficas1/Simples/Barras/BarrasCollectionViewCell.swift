@@ -26,7 +26,7 @@ class BarrasCollectionViewCell: UICollectionViewCell {
         let izquierdaConstrain = ingreso.leadingAnchor.constraint(equalTo: barraLlena1.leadingAnchor, constant: 0)
         let derechaConstrain = ingreso.trailingAnchor.constraint(equalTo: barraLlena1.trailingAnchor, constant: 0)
         let abajoConstrain = ingreso.bottomAnchor.constraint(equalTo: barraLlena1.bottomAnchor, constant: 0)
-        let altoConstrain = ingreso.heightAnchor.constraint(equalToConstant: 40)
+        let altoConstrain = ingreso.heightAnchor.constraint(equalToConstant: CGFloat(alto) / 100)
         constrains.append(contentsOf: [izquierdaConstrain, derechaConstrain, altoConstrain, abajoConstrain])
         NSLayoutConstraint.activate(constrains)
     }
@@ -41,7 +41,7 @@ class BarrasCollectionViewCell: UICollectionViewCell {
         let izquierdaConstrain = egreso.leadingAnchor.constraint(equalTo: barrallena2.leadingAnchor, constant: 0)
         let derechaConstrain = egreso.trailingAnchor.constraint(equalTo: barrallena2.trailingAnchor, constant: 0)
         let abajoConstrain = egreso.bottomAnchor.constraint(equalTo: barrallena2.bottomAnchor, constant: 0)
-        let altoConstrain = egreso.heightAnchor.constraint(equalToConstant: 130)
+        let altoConstrain = egreso.heightAnchor.constraint(equalToConstant: CGFloat(alto) / 100)
         constrains.append(contentsOf: [izquierdaConstrain, derechaConstrain, altoConstrain, abajoConstrain])
         NSLayoutConstraint.activate(constrains)
     }

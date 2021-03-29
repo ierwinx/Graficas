@@ -10,17 +10,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="barrasCollectionViewCell" id="gTV-IL-0wX" customClass="BarrasCollectionViewCell" customModule="Graficas1" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="79" height="212"/>
+            <rect key="frame" x="0.0" y="0.0" width="79" height="179"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="79" height="212"/>
+                <rect key="frame" x="0.0" y="0.0" width="79" height="179"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoh-xD-IIu">
-                        <rect key="frame" x="0.0" y="0.0" width="79" height="212"/>
+                        <rect key="frame" x="0.0" y="0.0" width="79" height="179"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-n4-evY">
-                                <rect key="frame" x="10" y="10" width="24" height="192"/>
+                                <rect key="frame" x="10" y="10" width="24" height="159"/>
                                 <color key="backgroundColor" red="0.65984165669999995" green="0.91150623559999999" blue="0.79214459660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="hRi-bN-btO"/>
@@ -32,7 +32,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geP-6W-q0D">
-                                <rect key="frame" x="44" y="10" width="24" height="192"/>
+                                <rect key="frame" x="44" y="10" width="24" height="159"/>
                                 <color key="backgroundColor" red="1" green="0.62472764259787017" blue="0.64463224356198501" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="nc3-Tj-Xvd"/>
@@ -63,12 +63,12 @@
                 <constraint firstAttribute="trailing" secondItem="uoh-xD-IIu" secondAttribute="trailing" id="bW9-cJ-YNx"/>
                 <constraint firstItem="uoh-xD-IIu" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yht-KV-Dbk"/>
             </constraints>
-            <size key="customSize" width="79" height="212"/>
+            <size key="customSize" width="79" height="179"/>
             <connections>
                 <outlet property="barraLlena1" destination="xvv-n4-evY" id="Rob-wq-aeZ"/>
                 <outlet property="barrallena2" destination="geP-6W-q0D" id="meg-zU-55l"/>
             </connections>
-            <point key="canvasLocation" x="48.550724637681164" y="158.03571428571428"/>
+            <point key="canvasLocation" x="48.550724637681164" y="146.98660714285714"/>
         </collectionViewCell>
     </objects>
 </document>

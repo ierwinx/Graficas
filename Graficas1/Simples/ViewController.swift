@@ -31,9 +31,9 @@ class ViewController: UIViewController {
         barras.dataSource = self
         barras.register(UINib(nibName: "BarrasCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "barrasCollectionViewCell")
         self.cuentas = [
-            Cuenta(ingresos: 34000, egresos: 20000, nombre: "Bancomer"),
+            Cuenta(ingresos: 15000, egresos: 15000, nombre: "Bancomer"),
             Cuenta(ingresos: 10000, egresos: 11000, nombre: "Banamex"),
-            Cuenta(ingresos: 3000, egresos: 2000, nombre: "Banregio"),
+            Cuenta(ingresos: 13000, egresos: 3000, nombre: "Banregio"),
             Cuenta(ingresos: 10000, egresos: 5000, nombre: "Liverpool")
         ]
     }

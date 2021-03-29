@@ -31,8 +31,7 @@ class PieChartView: UIView {
             ctx.move(to: viewCenter)
             ctx.addArc(center: viewCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
             ctx.fillPath()
-                        
-            //escribe texto
+
             let halfAngle: CGFloat = startAngle + (endAngle - startAngle) * 0.5
             var segmentCenter: CGPoint = CGPoint(x: bounds.size.width * 0.44, y: bounds.size.height * 0.45)
             let textPositionOffset: CGFloat = 0.67
