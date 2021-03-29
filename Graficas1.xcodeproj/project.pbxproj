@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		829DE91D26114DFE007AD078 /* BarrasCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DE91B26114DFE007AD078 /* BarrasCollectionViewCell.swift */; };
+		829DE91E26114DFE007AD078 /* BarrasCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829DE91C26114DFE007AD078 /* BarrasCollectionViewCell.xib */; };
+		829DE921261152DB007AD078 /* Cuenta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DE920261152DB007AD078 /* Cuenta.swift */; };
+		829DE92A26115379007AD078 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829DE92926115379007AD078 /* Segment.swift */; };
 		AAF5A951260E566900EDA6A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A950260E566900EDA6A3 /* AppDelegate.swift */; };
 		AAF5A953260E566900EDA6A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A952260E566900EDA6A3 /* SceneDelegate.swift */; };
 		AAF5A955260E566900EDA6A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5A954260E566900EDA6A3 /* ViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		829DE91B26114DFE007AD078 /* BarrasCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrasCollectionViewCell.swift; sourceTree = "<group>"; };
+		829DE91C26114DFE007AD078 /* BarrasCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarrasCollectionViewCell.xib; sourceTree = "<group>"; };
+		829DE920261152DB007AD078 /* Cuenta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuenta.swift; sourceTree = "<group>"; };
+		829DE92926115379007AD078 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		AAF5A94D260E566900EDA6A3 /* Graficas1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graficas1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF5A950260E566900EDA6A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF5A952260E566900EDA6A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		829DE91826114DC8007AD078 /* Pie */ = {
+			isa = PBXGroup;
+			children = (
+				AAF5A965260E6D6700EDA6A3 /* PieChartView.swift */,
+				829DE92926115379007AD078 /* Segment.swift */,
+			);
+			path = Pie;
+			sourceTree = "<group>";
+		};
+		829DE91926114DD0007AD078 /* Barras */ = {
+			isa = PBXGroup;
+			children = (
+				829DE91B26114DFE007AD078 /* BarrasCollectionViewCell.swift */,
+				829DE91C26114DFE007AD078 /* BarrasCollectionViewCell.xib */,
+				829DE920261152DB007AD078 /* Cuenta.swift */,
+			);
+			path = Barras;
+			sourceTree = "<group>";
+		};
 		AAF5A944260E566900EDA6A3 = {
 			isa = PBXGroup;
 			children = (
@@ -72,7 +99,8 @@
 		AAF5A968260E71B400EDA6A3 /* Simples */ = {
 			isa = PBXGroup;
 			children = (
-				AAF5A965260E6D6700EDA6A3 /* PieChartView.swift */,
+				829DE91926114DD0007AD078 /* Barras */,
+				829DE91826114DC8007AD078 /* Pie */,
 				AAF5A954260E566900EDA6A3 /* ViewController.swift */,
 				AAF5A956260E566900EDA6A3 /* Main.storyboard */,
 			);
@@ -146,6 +174,7 @@
 				AAF5A95D260E566900EDA6A3 /* LaunchScreen.storyboard in Resources */,
 				AAF5A95A260E566900EDA6A3 /* Assets.xcassets in Resources */,
 				AAF5A958260E566900EDA6A3 /* Main.storyboard in Resources */,
+				829DE91E26114DFE007AD078 /* BarrasCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +185,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829DE91D26114DFE007AD078 /* BarrasCollectionViewCell.swift in Sources */,
+				829DE921261152DB007AD078 /* Cuenta.swift in Sources */,
 				AAF5A966260E6D6700EDA6A3 /* PieChartView.swift in Sources */,
+				829DE92A26115379007AD078 /* Segment.swift in Sources */,
 				AAF5A955260E566900EDA6A3 /* ViewController.swift in Sources */,
 				AAF5A951260E566900EDA6A3 /* AppDelegate.swift in Sources */,
 				AAF5A953260E566900EDA6A3 /* SceneDelegate.swift in Sources */,
@@ -309,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				INFOPLIST_FILE = Graficas1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9TPTHP2V2G;
 				INFOPLIST_FILE = Graficas1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

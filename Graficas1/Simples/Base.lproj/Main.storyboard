@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,8 +32,22 @@
                                     <constraint firstAttribute="height" constant="80" id="Md4-Dp-ZaO"/>
                                 </constraints>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Tty-b4-pNj">
+                                <rect key="frame" x="20" y="310" width="374" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5kn-BP-pGo"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NsA-yD-NTF">
+                                    <size key="itemSize" width="51" height="199"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRX-Ss-ggg">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="107" y="530" width="200" height="200"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DiA-0t-JcF">
                                         <rect key="frame" x="8" y="8" width="24" height="184"/>
@@ -206,12 +220,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pRX-Ss-ggg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Qx-8c-b1X"/>
                             <constraint firstItem="96v-v9-dft" firstAttribute="centerY" secondItem="Ith-ph-M2z" secondAttribute="centerY" id="0tI-Vy-Ohg"/>
+                            <constraint firstItem="Tty-b4-pNj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6hy-ea-TRE"/>
                             <constraint firstItem="Ith-ph-M2z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6jj-Ax-3fP"/>
+                            <constraint firstItem="pRX-Ss-ggg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GAB-Ks-VD3"/>
                             <constraint firstItem="Ith-ph-M2z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="N44-Xm-285"/>
+                            <constraint firstItem="Tty-b4-pNj" firstAttribute="top" secondItem="Ith-ph-M2z" secondAttribute="bottom" constant="50" id="hcR-hn-aKU"/>
                             <constraint firstItem="96v-v9-dft" firstAttribute="centerX" secondItem="Ith-ph-M2z" secondAttribute="centerX" id="o4n-Mz-6oW"/>
-                            <constraint firstItem="pRX-Ss-ggg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="riA-Ie-pmP"/>
+                            <constraint firstItem="pRX-Ss-ggg" firstAttribute="top" secondItem="Tty-b4-pNj" secondAttribute="bottom" constant="20" id="tFm-eR-12O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tty-b4-pNj" secondAttribute="trailing" constant="20" id="xiY-iR-aaH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -220,6 +237,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="barras" destination="Tty-b4-pNj" id="uEF-vj-hBd"/>
                         <outlet property="circuloEncima" destination="96v-v9-dft" id="Lmx-ZE-Mog"/>
                         <outlet property="graficaPie" destination="Ith-ph-M2z" id="QtS-fi-h7e"/>
                     </connections>
