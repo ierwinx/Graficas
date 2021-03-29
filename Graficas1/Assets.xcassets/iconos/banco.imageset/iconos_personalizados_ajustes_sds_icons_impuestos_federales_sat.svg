@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <filter id="kuc7p4r7ma">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.427451 0 0 0 0 0.482353 0 0 0 0 0.509804 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g filter="url(#kuc7p4r7ma)" transform="translate(-32 -1408) translate(0 379) translate(16 204) translate(0 809)">
+                        <g>
+                            <path d="M0 0L24 0 24 24 0 24z" transform="translate(16 16)"/>
+                            <path fill="#2E3032" fill-rule="nonzero" d="M4.5 11.5v4c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5zm6 0v4c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5zM4 22h16c.83 0 1.5-.67 1.5-1.5S20.83 19 20 19H4c-.83 0-1.5.67-1.5 1.5S3.17 22 4 22zm12.5-10.5v4c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5zM11.07 1.49l-7.9 4.16c-.41.21-.67.64-.67 1.1C2.5 7.44 3.06 8 3.75 8h16.51c.68 0 1.24-.56 1.24-1.25 0-.46-.26-.89-.67-1.1l-7.9-4.16c-.58-.31-1.28-.31-1.86 0z" transform="translate(16 16)"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

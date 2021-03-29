@@ -8,11 +8,11 @@ class PieChartView: UIView {
         }
     }
     
-    private func forEachSegment(_ body: (Segment, _ startAngle: CGFloat, _ endAngle: CGFloat) -> Void) {
-        let valueCount = segments.lazy.map { $0.value }.sum()
+    private func forEachSegment(_ body: (_ segmento: Segment, _ startAngle: CGFloat, _ endAngle: CGFloat) -> Void) {
+        let valueCount: CGFloat = segments.lazy.map { $0.value }.sum()
         var startAngle: CGFloat = 0.0
         for segment in segments {
-            let endAngle = startAngle + .pi * 2 * (segment.value / valueCount)
+            let endAngle: CGFloat = startAngle + .pi * 2 * (segment.value / valueCount)
             defer {
                 startAngle = endAngle
             }
@@ -26,12 +26,12 @@ class PieChartView: UIView {
         let radius: CGFloat = min(frame.size.width, frame.size.height) * 0.5
         let viewCenter = bounds.center
         
-        forEachSegment { segment, startAngle, endAngle in
-            ctx.setFillColor(segment.color.cgColor)
+        forEachSegment { segmento, startAngle, endAngle in
+            ctx.setFillColor(segmento.color.cgColor)
             ctx.move(to: viewCenter)
             ctx.addArc(center: viewCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: false)
             ctx.fillPath()
-            
+                        
             //escribe texto
             let halfAngle: CGFloat = startAngle + (endAngle - startAngle) * 0.5
             var segmentCenter: CGPoint = CGPoint(x: bounds.size.width * 0.44, y: bounds.size.height * 0.45)
@@ -39,8 +39,14 @@ class PieChartView: UIView {
             if segments.count > 1 {
               segmentCenter = segmentCenter.projected(by: radius * textPositionOffset, angle: halfAngle)
             }
-            let texto: String = segment.name.isEmpty ? segment.value.description : segment.name
-            texto.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
+            
+            if segmento.addImage {
+                segmento.imagen.draw(in: CGRect(origin: segmentCenter, size: CGSize(width: 25, height: 25)))
+            } else {
+                let texto: String = segmento.name.isEmpty ? segmento.value.description : segmento.name
+                texto.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
+            }
+            
         }
         
     }
