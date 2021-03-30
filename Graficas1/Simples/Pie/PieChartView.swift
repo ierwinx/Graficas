@@ -34,13 +34,13 @@ class PieChartView: UIView {
 
             let halfAngle: CGFloat = startAngle + (endAngle - startAngle) * 0.5
             var segmentCenter: CGPoint = CGPoint(x: bounds.size.width * 0.44, y: bounds.size.height * 0.45)
-            let textPositionOffset: CGFloat = 0.67
+            let textPositionOffset: CGFloat = 0.67 // este es la altura donde muestra la imagen apartir del centro
             if segments.count > 1 {
               segmentCenter = segmentCenter.projected(by: radius * textPositionOffset, angle: halfAngle)
             }
             
             if segmento.addImage {
-                segmento.imagen.draw(in: CGRect(origin: segmentCenter, size: CGSize(width: 25, height: 25)))
+                segmento.imagen.draw(CGRect(origin: segmentCenter, size: CGSize(width: 25, height: 25)))
             } else {
                 let texto: String = segmento.name.isEmpty ? segmento.value.description : segmento.name
                 texto.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)

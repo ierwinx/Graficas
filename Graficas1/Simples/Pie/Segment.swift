@@ -5,10 +5,10 @@ struct Segment {
     let color: UIColor
     let value: CGFloat
     let name: String
-    let imagen: UIImage
+    let imagen: UIImageView
     var addImage: Bool
     
-    init(color: UIColor, value: CGFloat, name: String, imagen: UIImage, addImage: Bool) {
+    init(color: UIColor, value: CGFloat, name: String, imagen: UIImageView, addImage: Bool) {
         self.color = color
         self.value = value
         self.name = name
