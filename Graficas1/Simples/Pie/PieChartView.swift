@@ -8,6 +8,8 @@ class PieChartView: UIView {
         }
     }
     
+    private var arrListPointsTouch:[CGRect] = []
+    
     private func forEachSegment(_ body: (_ segmento: Segment, _ startAngle: CGFloat, _ endAngle: CGFloat) -> Void) {
         let valueCount: CGFloat = segments.lazy.map { $0.value }.sum()
         var startAngle: CGFloat = 0.0
@@ -17,6 +19,16 @@ class PieChartView: UIView {
                 startAngle = endAngle
             }
             body(segment, startAngle, endAngle)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        guard let touch = touches.first else { return }
+        let firstPoint = touch.location(in: self)
+        for punto in arrListPointsTouch
+            where punto.intersects(CGRect(x: firstPoint.x, y: firstPoint.y, width: 25, height: 25)) {
+            print("Tocaste")
         }
     }
 
@@ -39,11 +51,14 @@ class PieChartView: UIView {
               segmentCenter = segmentCenter.projected(by: radius * textPositionOffset, angle: halfAngle)
             }
             
+            let rectParaTocar = CGRect(origin: segmentCenter, size: CGSize(width: segmento.addImage ? 25 : 40, height: segmento.addImage ? 25 : 20 ))
+            arrListPointsTouch.append(rectParaTocar)
+            
             if segmento.addImage {
-                segmento.imagen.draw(CGRect(origin: segmentCenter, size: CGSize(width: 25, height: 25)))
+                segmento.imagen.image?.draw(in: rectParaTocar)
             } else {
                 let texto: String = segmento.name.isEmpty ? segmento.value.description : segmento.name
-                texto.draw(with: CGRect(origin: segmentCenter, size: CGSize(width: 40, height: 20)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
+                texto.draw(with: rectParaTocar, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor: UIColor.black], context: nil)
             }
             
         }

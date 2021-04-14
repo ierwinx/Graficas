@@ -85,7 +85,6 @@
 		AAF5A94F260E566900EDA6A3 /* Graficas1 */ = {
 			isa = PBXGroup;
 			children = (
-				AAF5A96A260E73B800EDA6A3 /* Avanzadas */,
 				AAF5A968260E71B400EDA6A3 /* Simples */,
 				AAF5A950260E566900EDA6A3 /* AppDelegate.swift */,
 				AAF5A952260E566900EDA6A3 /* SceneDelegate.swift */,
@@ -105,13 +104,6 @@
 				AAF5A956260E566900EDA6A3 /* Main.storyboard */,
 			);
 			path = Simples;
-			sourceTree = "<group>";
-		};
-		AAF5A96A260E73B800EDA6A3 /* Avanzadas */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Avanzadas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
